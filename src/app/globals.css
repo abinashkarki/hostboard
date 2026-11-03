@@ -76,3 +76,15 @@ h1 { margin: 0; font-size: 28px; letter-spacing: -0.02em; font-weight: 650; }
 .status.scheduled { background: #f2f4f7; color: #475467; }
 .status.in_progress { background: #fff4e5; color: #b54708; }
 .status.done { background: var(--brand-soft); color: var(--brand); }
+
+.badge-turnover {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+}

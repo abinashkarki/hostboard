@@ -44,7 +44,10 @@ export function TurnoverTable({ rows }: { rows: BoardRow[] }) {
                     {row.property.name.slice(0, 1)}
                   </span>
                   <div>
-                    <div className="property-name">{row.property.name}</div>
+                    <div className="property-name">
+                      {row.property.name}
+                      {row.sameDayTurnover && <span className="badge-turnover">Same-day turnover</span>}
+                    </div>
                     <div className="property-meta">
                       {row.property.suburb} · {row.property.beds} bed{row.property.beds > 1 ? "s" : ""}
                     </div>
