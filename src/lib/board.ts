@@ -40,10 +40,14 @@ export function buildBoard(
       arrival: inn ? { guest: inn.guest, time: inn.checkInTime } : null,
       cleaner: clean.cleaner,
       cleanStatus: clean.cleanStatus,
+      sameDayTurnover: Boolean(out && inn),
     });
   }
 
-  return rows.sort((a, b) => firstEventMinutes(a) - firstEventMinutes(b));
+  return rows.sort(
+    (a, b) =>
+      Number(b.sameDayTurnover) - Number(a.sameDayTurnover) || firstEventMinutes(a) - firstEventMinutes(b),
+  );
 }
 
 export function summarize(rows: BoardRow[]): BoardSummary {

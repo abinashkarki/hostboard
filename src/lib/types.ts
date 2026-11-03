@@ -44,6 +44,8 @@ export interface BoardRow {
   arrival: Movement | null;
   cleaner: string | null;
   cleanStatus: CleanStatus;
+  /** True when the property has both a departure and an arrival on the board date. */
+  sameDayTurnover: boolean;
 }
 
 export interface BoardSummary {
